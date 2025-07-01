@@ -28,6 +28,7 @@ def load_models():
   lr_scaler = joblib.load("lr_scaler.pkl")
   inc_model = load_model("inc_model.keras")
   inc_scaler = joblib.load("inc_scaler.pkl")
+  return lr_model, lr_scaler, inc_model, inc_scaler
 
 def generateCurve(mutrate, k, r0, err_rate, genint, import_rate):
   df = pd.DataFrame({
