@@ -23,10 +23,11 @@ wget https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/i
 wget https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/lr_scaler.pkl
 """
 
-lr_model = load_model("lr_model.keras")
-lr_scaler = joblib.load("lr_scaler.pkl")
-inc_model = load_model("inc_model.keras")
-inc_scaler = joblib.load("inc_scaler.pkl")
+def load_models():
+  lr_model = load_model("lr_model.keras")
+  lr_scaler = joblib.load("lr_scaler.pkl")
+  inc_model = load_model("inc_model.keras")
+  inc_scaler = joblib.load("inc_scaler.pkl")
 
 def generateCurve(mutrate, k, r0, err_rate, genint, import_rate):
   df = pd.DataFrame({
