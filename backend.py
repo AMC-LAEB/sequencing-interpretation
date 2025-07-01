@@ -17,10 +17,10 @@ import warnings
 from google.colab.output import eval_js
 
 wget_call = """
-wget https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/inc_model.keras
-wget https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/lr_model.keras
-wget https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/inc_scaler.pkl
-wget https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/lr_scaler.pkl
+wget -q https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/inc_model.keras
+wget -q https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/lr_model.keras
+wget -q https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/inc_scaler.pkl
+wget -q https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/lr_scaler.pkl
 """
 
 def load_models():
