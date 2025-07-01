@@ -19,8 +19,8 @@ from google.colab.output import eval_js
 wget_call = """
 wget https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/inc_model.keras
 wget https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/lr_model.keras
-!wget https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/inc_scaler.pkl
-!wget https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/lr_scaler.pkl
+wget https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/inc_scaler.pkl
+wget https://raw.githubusercontent.com/AMC-LAEB/sequencing-interpretation/main/lr_scaler.pkl
 """
 
 lr_model = load_model("lr_model.keras")
@@ -81,10 +81,7 @@ def generateCurve(mutrate, k, r0, err_rate, genint, import_rate):
 
   fig.show()
 
-
-
 def create_ui():
-
   warnings.filterwarnings('ignore')
 
   eval_js('google.colab.output.setIframeHeight("700")')
@@ -135,6 +132,7 @@ def create_ui():
       "err_rate": err_rate,
       "genint": genint,
       "import_rate": import_rate})
+  
   return layout, interactive
 
 
